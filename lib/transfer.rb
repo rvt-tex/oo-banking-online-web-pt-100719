@@ -1,4 +1,4 @@
-require pry 
+
 class Transfer
   attr_accessor :sender, :receiver, :amount, :status
 
@@ -19,11 +19,10 @@ class Transfer
       @receiver.balance += @amount
       @status = "complete"
       @sender.balance < @amount
-      return "Transaction rejected. Please check your account balance."
+  
     else 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
-    binding.pry 
     end
     
   end
